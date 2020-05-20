@@ -1,16 +1,34 @@
+/* Soft reset do CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+
 body {
     background-image: url('http://davinciwaldorfschool.org/wp-content/uploads/Watercolor-Splash-28-Cool-Wallpaper-HD-copy2.jpg');
 
     background-size: cover;
-    font-family: arial;
+    font-family: 'Source Code Pro', monospace;
     height: 100vh;
     
+  }
+
+  header { 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   
   .menu ul {
     display: flex;
     justify-content: space-around;
+    
   }
   
   .menu li{
@@ -19,6 +37,26 @@ body {
   
   .menu{
     background-color: white;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 1;
+    
+  }
+
+  .menu a {
+    color: teal;
+    display: block;
+    padding: 10px 10px;
+    transition: background-color 1s, color 1s;
+    font-size: 1.2em;
+    
+  }
+
+  .menu a:active,
+  .menu a:hover{
+    background-color: teal;
+    color:white
   }
   
   a {
@@ -30,11 +68,145 @@ body {
     text-decoration: underline;
   }
   
+  .titulos {
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
+    transition: all 2s; 
+
+    animation: linear 2s animacaoTitulo forwards;
+  }
+
+  @keyframes animacaoTitulo {
+
+
+    100% { 
+    transform: scale(1) translateY(0);
+    opacity: 1;
+    transition: all 2s; 
+
+    }
+
+  }
+
   .site-subtitle,
   .site-title {
     color: teal;
     text-align: center;
   }
-  .site-subtitle {
-    font-style: italic;
+
+  .site-title {
+    font-size: 7em;
+    font-family: 'Rancho', cursive;
   }
+  
+  .site-subtitle {
+    font-family: 'Rancho', cursive;
+    line-height: 1.5em ;  
+  }
+  
+
+  .sobre,
+  .contato, 
+  .portfolio {
+    padding: 2em;
+    margin-bottom: -2em;
+    min-height: 50px;
+    }
+
+  @media (min-width: 1200px) {
+    .container {
+       max-width: 1200px;
+       margin-left: auto;
+       margin-right: auto;
+    }
+  }
+   
+  .sobre h2,
+  .contato h2, 
+  .portfolio h2 {
+    font-family: 'Righteous', cursive;
+    color: black;
+    line-height: 5em;
+    text-align: center;
+    font-size: 2em;
+  }
+  
+
+  .sobre p {
+    color:teal;
+    font-size: 1.2em;
+    text-indent: 1.3em;
+    margin-bottom: 1em;
+    text-align: justify;
+  }
+
+  .sobre a {
+    color: blueviolet;
+  }
+
+  .sobre .avatar {
+   float: right;
+   margin-left: 2em;
+  }
+
+  .sobre .avatar img {
+  border-radius: 50%;
+ }
+
+
+.portfolio .grid { 
+  
+  display: grid;
+  gap: 7em;
+  text-align: center;
+  justify-content: center;
+  
+}
+
+.img-portfolio {
+  width: 100%;
+  height: 12em;
+  object-fit: cover;
+  border-radius: 10%;
+  
+  
+}
+
+/* .img-portfolio:hover {
+  transform: scale(1.2);
+  transition: transform 500ms;
+} */
+
+
+
+
+.portfolio figure {
+  text-align: center;
+  
+}
+
+
+/* Se a tela tiver pelo menos 700px vai carregar essas funções */
+@media (min-width: 700px) {
+.portfolio .grid{
+  grid-template-columns: 300px 300px;}
+}
+
+.contato {
+  text-align: center;
+ 
+}
+
+
+.contato a {
+  color: teal;
+  font-size: 5em;
+  text-align: center;
+  transition: text-shadow .5s;
+  
+}
+.contato a:active,
+.contato a:hover {
+  text-decoration: none;
+  text-shadow: 0px 0px 13px rgba(0, 128, 128, .5);
+}

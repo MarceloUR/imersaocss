@@ -18,6 +18,18 @@ body {
     
   }
 
+
+  @media (max-width: 1200px) {
+    .body {
+    background-repeat: repeat;
+    background-attachment: scroll ;
+    background-size: cover;
+    }
+
+  }
+
+
+
   header { 
     height: 100vh;
     display: flex;

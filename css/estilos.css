@@ -1,5 +1,18 @@
 /* Soft reset do CSS */
 
+
+
+html {
+  background: url(http://davinciwaldorfschool.org/wp-content/uploads/Watercolor-Splash-28-Cool-Wallpaper-HD-copy2.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -19,14 +32,7 @@ body {
   }
 
 
-  @media (max-width: 600px) {
-    .body {
-    background-repeat: repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    }
 
-  }
 
 
 

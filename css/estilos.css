@@ -12,14 +12,14 @@ body {
     background-image: url('http://davinciwaldorfschool.org/wp-content/uploads/Watercolor-Splash-28-Cool-Wallpaper-HD-copy2.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
+    
     font-family: 'Source Code Pro', monospace;
     height: 100vh;
     
   }
 
 
-  @media (max-width: 1200px) {
+  @media (max-width: 600px) {
     .body {
     background-repeat: repeat;
     background-attachment: scroll ;
@@ -164,6 +164,8 @@ body {
 
   .sobre .avatar img {
   border-radius: 50%;
+  height: 400px;
+  width: 400px;
  }
 
 

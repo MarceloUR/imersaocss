@@ -22,7 +22,7 @@ body {
   @media (max-width: 600px) {
     .body {
     background-repeat: repeat;
-    background-attachment: scroll ;
+    background-attachment: fixed;
     background-size: cover;
     }
 
